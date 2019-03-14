@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<title>
+		Demo
+	</title>
+
+<!--Start of Zendesk Chat Script-->
+<script type="text/javascript">
+    window.$zopim || (function (d, s) {
+        var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
+        d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
+            z.set.
+            _.push(o)
+        }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute('charset', 'utf-8');
+        $.src = '//v2.zopim.com/?2F4uasrDz8AwB7cxrCz3igHZtZovK0w4'; z.t = +new Date; $.
+        type = 'text/javascript'; e.parentNode.insertBefore($, e)
+    })(document, 'script');
+
+
+$zopim(function() {
+	console.log("sssssssssswwww")
+	console.log($zopim.livechat.getName());
+	    console.log($zopim.livechat.getEmail());
+	$zopim.livechat.setOnChatStart( function(){
+		console.log("ssss");
+		console.log($zopim.livechat.getName());
+		console.log($zopim.livechat.getEmail());
+		console.log($zopim.livechat.getPhone());
+	});
+
+	$zopim.livechat.setOnChatEnd( function(){
+		console.log("ssssppp");
+		console.log($zopim.livechat.getName());
+		console.log($zopim.livechat.getEmail());
+		console.log($zopim.livechat.getPhone());
+
+		var a = $zopim.livechat.getName();
+		var b = $zopim.livechat.getEmail();
+		var c = $zopim.livechat.getPhone();
+
+		var obj = {};
+		obj.p_username = a;
+		obj.p_mobilenumber = b;
+		obj.p_email = c;
+		obj.p_leadtype = "Lodha Palava City Dombivali";
+		obj.p_pref = "test Chat Lead";
+		obj.p_source = "Website";
+		obj.p_projectid = "129";
+		SendLead(obj);
+		return false;
+	});
+
+});
+    
+</script>
+<!--End of Zendesk Chat Script-->
+
+</head>
+<body>
+
+</body>
+</html>
+
+
